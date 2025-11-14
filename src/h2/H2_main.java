@@ -4,8 +4,8 @@ public class H2_main {
     public static void main(String[] args){
         boolean x = true, y = false, a = true, b = false, c = false;
         int input = 10;
-        boolean e1 = x = true;
-        boolean e2 = y == true;
+        boolean e1 = (x == true);
+        boolean e2 = (y == true);
         // E3 = x,y unterschiedlich
         if (input == 10 || input ==11){
             x = true;
@@ -22,7 +22,7 @@ public class H2_main {
         } else {
             a = false;
         }
-        if (e1 || (e1 && !e2) || (!e1 && e2)){
+        if (e1 || (x != y)){
             b = true;
         }
         if ((e1 && e2) || (!e1 && e2)){
